@@ -1,31 +1,29 @@
-// Last updated: 3/25/2025, 6:49:19 PM
+// Last updated: 3/25/2025, 7:00:01 PM
 class Solution {
 public:
 int majorityElement(vector<int> nums)
 {
-    int n = nums.size();
-    int count = 1;
+        int n = nums.size();
+    int i, majority_element;
+    int count = 0;
 
-    sort(nums.begin(), nums.end());
-    int majority_element = nums.at(0);
-
-    for (int i = 1; i < n;i++)
+    for (i = 0; i < n; i++)
     {
-        if (nums.at(i) == nums.at(i - 1))
+        if (count == 0)
+        {
+            majority_element = nums.at(i);
+        }
+
+        if (majority_element == nums.at(i))
         {
             count++;
         }
         else
         {
-            count = 1;
-            majority_element = nums.at(i);
-        }
-
-        if (count > n / 2)
-        {
-            return majority_element;
+            count--;
         }
     }
+
     return majority_element;
 }
 };
