@@ -1,4 +1,4 @@
-// Last updated: 3/26/2025, 3:34:59 PM
+// Last updated: 3/26/2025, 3:35:15 PM
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
