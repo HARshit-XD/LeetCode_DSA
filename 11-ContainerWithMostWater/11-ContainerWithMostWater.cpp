@@ -1,4 +1,4 @@
-// Last updated: 3/27/2025, 10:24:44 AM
+// Last updated: 3/27/2025, 10:28:22 AM
 class Solution {
 public:
     int maxArea(vector<int>& vec) {
